@@ -18,7 +18,7 @@ int main(){
     printf(" 2- Produto 50 reais \n");
     printf(" 2- Produto 20 reais \n");
     printf(" 2- Produto 150 reais \n");
-    scanf("%d",&produto);
+    scanf("%i",&produto);
     
     switch(produto)
     {
@@ -61,7 +61,6 @@ int main(){
         switch(forma_de_pagamento){
         case 1:
             valortotal = valor_do_produto * 0.90;//O produto ganha 10%de desconto
-            
             break;
             
         case 2:
@@ -88,17 +87,19 @@ int main(){
         printf("Forma de pagamento invalida");
         }
 
-        valortotal = trunc(valortotal);
-        // // // printf(" O valor total é igual a %f",valortotal);
+        //valortotal = trunc(valortotal);// metodo trunc retorna somente o valor inteiro do valor 
+        
 
-        desconto = valor_do_produto - valortotal;
-        printf("O valor total do produto é igual a %f",valortotal);
-        printf("O valor total do desconto é igual a %f",desconto);
+        desconto = valor_do_produto - valortotal;// calcula o valor do desconto
+        printf("O valor total do produto é igual a %f",valor_do_produto);//Retorna o valor do produto
+        printf("\nO valor total do desconto é igual a %f",desconto);
 
-        printf("O valor total da compra é igual a ");
+        printf("\nO valor total da compra é igual a %f",valortotal);
+
+        return 1;
           
             
     }
     
 }
-       
+    
