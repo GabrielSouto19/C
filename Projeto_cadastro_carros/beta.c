@@ -52,9 +52,9 @@ int main(){
              for (int i = 0;i<3;i++){
              
                 if (i ==1){
-                printf("%d %d %d \n",vetor_ano[i],vetor_kms[i],vetor_preco[i]);
-                // printf("%d \n",vetor_kms[i]);
-                // printf("%d \n",vetor_preco[i]);
+                printf("%d\n",vetor_ano[i]);
+                printf("%d \n",vetor_kms[i]);
+                printf("%d \n",vetor_preco[i]);
                 }
              break;   
             }
@@ -65,10 +65,7 @@ int main(){
             printf("Encerrando");
             break;
         }
-        else{
-            printf("Escolha uma opção válida");
-        }
-
+      
         }//fechamento do escopo for
       
     
