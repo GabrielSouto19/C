@@ -60,7 +60,7 @@ int main(){
             }
           
         }
-        else if (opcao ==3){
+        else if (opcao == 3){
             // se a opção escolhida for igual a 4 o código se encerre
             printf("Encerrando");
             break;

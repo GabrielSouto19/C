@@ -6,16 +6,9 @@
 
 #define TAMANHO 3  // Definindo uma constante para o tamanho
 
-// Definindo uma estrutura para armazenar as informações de um carro
-typedef struct {
-    int ano;
-    int kms;
-    int preco;
-} Carro;
-
-int main() {
-    int opcao;
-    Carro carros[TAMANHO];  // Array de structs para armazenar até 3 carros
+int main(){
+    int opcao, ano, preco, kms;
+    int vetor_ano[TAMANHO], vetor_kms[TAMANHO], vetor_preco[TAMANHO];
     int contador = 0;  // Controlar o número de carros cadastrados
 
     while (1) {  // Loop principal do menu
@@ -32,13 +25,17 @@ int main() {
             if (contador < TAMANHO) {
                 printf("\nInforme as seguintes características do carro %d\n", contador + 1);
                 printf("Ano: ");
-                scanf("%d", &carros[contador].ano);
+                scanf("%d", &ano);
                 printf("Km's rodados: ");
-                scanf("%d", &carros[contador].kms);
+                scanf("%d", &kms);
                 printf("Preço: ");
-                scanf("%d", &carros[contador].preco);
+                scanf("%d", &preco);
 
+                vetor_ano[contador] = ano;
+                vetor_kms[contador] = kms;
+                vetor_preco[contador] = preco;
                 contador++;  // Incrementa o contador de carros cadastrados
+
             } else {
                 printf("\nLimite de cadastro de carros atingido!\n");
             }
@@ -47,9 +44,9 @@ int main() {
             printf("\nCarros cadastrados:\n");
             for (int i = 0; i < contador; i++) {
                 printf("\nCarro %d:\n", i + 1);
-                printf("Ano: %d\n", carros[i].ano);
-                printf("Km's rodados: %d\n", carros[i].kms);
-                printf("Preço: %d\n", carros[i].preco);
+                printf("Ano: %d\n", vetor_ano[i]);
+                printf("Km's rodados: %d\n", vetor_kms[i]);
+                printf("Preço: %d\n", vetor_preco[i]);
             }
 
             if (contador == 0) {
