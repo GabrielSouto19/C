@@ -13,6 +13,14 @@ typedef struct {
     int preco;
 } Carro;
 
+typedef struct {
+    int nome;
+    int telefone;
+    int cpf;
+} Cliente;
+
+
+
 int main() {
     int opcao;
     Carro carros[TAMANHO];  // Array de structs para armazenar até 3 carros
